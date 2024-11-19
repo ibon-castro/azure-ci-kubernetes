@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: iboncastroazurecikubernetes 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iboncastroazurecikubernetes
+  template:
+    metadata:
+      labels:
+        app: iboncastroazurecikubernetes 
+    spec:
+      containers:
+        - name: iboncastroazurecikubernetes 
+          image: iboncasecr.azurecr.io/iboncastroazurecikubernetes
+          ports:
+          - containerPort: 8080
